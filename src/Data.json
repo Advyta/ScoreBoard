@@ -1,0 +1,289 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "grade": 1,
+      "students": [
+        {
+          "id": 101,
+          "first_name": "Emma",
+          "middle_name": "Louise",
+          "last_name": "Smith",
+          "age": 6,
+          "gender": "Female",
+          "marks": {
+            "Math": 90,
+            "English": 85,
+            "Science": 88,
+            "Drawing": 95,
+            "Physical Education": 92
+          }
+        },
+        {
+          "id": 102,
+          "first_name": "Liam",
+          "middle_name": "Michael",
+          "last_name": "Brown",
+          "age": 7,
+          "gender": "Male",
+          "marks": {
+            "Math": 87,
+            "English": 80,
+            "Science": 89,
+            "Drawing": 92,
+            "Physical Education": 94
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "grade": 2,
+      "students": [
+        {
+          "id": 201,
+          "first_name": "Noah",
+          "middle_name": "Alexander",
+          "last_name": "Davis",
+          "age": 7,
+          "gender": "Male",
+          "marks": {
+            "Math": 82,
+            "English": 79,
+            "Science": 85,
+            "Geography": 88,
+            "Art": 90
+          }
+        },
+        {
+          "id": 202,
+          "first_name": "Olivia",
+          "middle_name": "Marie",
+          "last_name": "Wilson",
+          "age": 7,
+          "gender": "Female",
+          "marks": {
+            "Math": 89,
+            "English": 91,
+            "Science": 86,
+            "Geography": 92,
+            "Art": 88
+          }
+        },
+        {
+          "id": 203,
+          "first_name": "Mason",
+          "middle_name": "James",
+          "last_name": "Moore",
+          "age": 8,
+          "gender": "Male",
+          "marks": {
+            "Math": 76,
+            "English": 81,
+            "Science": 79,
+            "Geography": 83,
+            "Art": 85
+          }
+        },
+        {
+          "id": 204,
+          "first_name": "Sophia",
+          "middle_name": "Grace",
+          "last_name": "Williams",
+          "age": 8,
+          "gender": "Female",
+          "marks": {
+            "Math": 88,
+            "English": 90,
+            "Science": 92,
+            "Geography": 91,
+            "Art": 94
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "grade": 3,
+      "students": [
+        {
+          "id": 301,
+          "first_name": "Ava",
+          "middle_name": "Rose",
+          "last_name": "Taylor",
+          "age": 8,
+          "gender": "Female",
+          "marks": {
+            "Math": 92,
+            "English": 87,
+            "Science": 88,
+            "History": 90,
+            "Music": 89
+          }
+        },
+        {
+          "id": 302,
+          "first_name": "Elijah",
+          "middle_name": "Scott",
+          "last_name": "Anderson",
+          "age": 8,
+          "gender": "Male",
+          "marks": {
+            "Math": 85,
+            "English": 83,
+            "Science": 86,
+            "History": 82,
+            "Music": 87
+          }
+        },
+        {
+          "id": 303,
+          "first_name": "Isabella",
+          "middle_name": "Hope",
+          "last_name": "Thomas",
+          "age": 9,
+          "gender": "Female",
+          "marks": {
+            "Math": 95,
+            "English": 92,
+            "Science": 94,
+            "History": 93,
+            "Music": 91
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "grade": 4,
+      "students": [
+        {
+          "id": 401,
+          "first_name": "Ethan",
+          "middle_name": "John",
+          "last_name": "Carter",
+          "age": 9,
+          "gender": "Male",
+          "marks": {
+            "Math": 85,
+            "English": 88,
+            "Science": 92,
+            "History": 80,
+            "Art": 95
+          }
+        },
+        {
+          "id": 402,
+          "first_name": "Sophia",
+          "middle_name": "Anne",
+          "last_name": "Miller",
+          "age": 10,
+          "gender": "Female",
+          "marks": {
+            "Math": 90,
+            "English": 91,
+            "Science": 94,
+            "History": 89,
+            "Art": 87
+          }
+        },
+        {
+          "id": 403,
+          "first_name": "Jack",
+          "middle_name": "David",
+          "last_name": "Hall",
+          "age": 9,
+          "gender": "Male",
+          "marks": {
+            "Math": 78,
+            "English": 82,
+            "Science": 85,
+            "History": 74,
+            "Art": 88
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "grade": 5,
+      "students": [
+        {
+          "id": 501,
+          "first_name": "Charlotte",
+          "middle_name": "Joy",
+          "last_name": "Martin",
+          "age": 10,
+          "gender": "Female",
+          "marks": {
+            "Math": 88,
+            "English": 90,
+            "Science": 89,
+            "History": 92,
+            "French": 87
+          }
+        },
+        {
+          "id": 502,
+          "first_name": "Lucas",
+          "middle_name": "Daniel",
+          "last_name": "Thompson",
+          "age": 11,
+          "gender": "Male",
+          "marks": {
+            "Math": 86,
+            "English": 84,
+            "Science": 82,
+            "History": 80,
+            "French": 88
+          }
+        },
+        {
+          "id": 503,
+          "first_name": "Amelia",
+          "middle_name": "Jane",
+          "last_name": "Garcia",
+          "age": 11,
+          "gender": "Female",
+          "marks": {
+            "Math": 93,
+            "English": 95,
+            "Science": 94,
+            "History": 91,
+            "French": 90
+          }
+        },
+        {
+          "id": 504,
+          "first_name": "Mia",
+          "middle_name": "Faith",
+          "last_name": "White",
+          "age": 10,
+          "gender": "Female",
+          "marks": {
+            "Math": 91,
+            "English": 89,
+            "Science": 92,
+            "History": 88,
+            "French": 86
+          }
+        },
+        {
+          "id": 505,
+          "first_name": "Benjamin",
+          "middle_name": "Thomas",
+          "last_name": "Harris",
+          "age": 11,
+          "gender": "Male",
+          "marks": {
+            "Math": 84,
+            "English": 85,
+            "Science": 87,
+            "History": 83,
+            "French": 81
+          }
+        }
+      ]
+    }
+  ]
+}

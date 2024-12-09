@@ -3,7 +3,7 @@ import {
   Table,
   TableBody,
   TableContainer,
-  TablePagination,
+  // TablePagination,
   TableCell,
   TableHead,
   TableRow,

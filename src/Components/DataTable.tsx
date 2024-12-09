@@ -3,7 +3,7 @@ import {
   Table,
   TableBody,
   TableContainer,
-  // TablePagination,
+  TablePagination,
   TableCell,
   TableHead,
   TableRow,
@@ -11,15 +11,14 @@ import {
 } from "@mui/material";
 import React from "react";
 
-
 // Project:     Reactjs Practice
-// Module:      View Module
+// Module:       Enrollment Module
 // Component:   Table Component
 // Author:      Advyta
-// Date:        25 Nov 2024
+// Date:        20 Nov 2024
 // Logic:
 // This component gets columns and rows data for the selected grade and It renders a Table using material UI.
-// Generates table columns dynamically based on keys from the data and lets the user sort the data. It also lets the user 
+//  Generates table columns dynamically based on keys from the data and lets the user sort the data. It also lets the user
 // select which column should have sort enabled and it also lets the user align the data
 
 // Usage: Provide correct columnData and row data. columnData should be an array of objects each object should have
@@ -119,31 +118,21 @@ const DataTableHead: React.FC<IDataTableHeadProps> = ({
   );
 };
 
-
-
 const DataTable: React.FC<IDataTableProps> = ({
   columnData,
   rows,
 }): JSX.Element => {
-  let internalColumnData: IDataTableColumn[] = [
-    {
-      id: "",
-      name: "",
-      align: "inherit",
-      enableSort: false,
-    },
-  ];
+  let internalColumnData: IDataTableColumn[] = [];
+
+  // Infer columns if columnData is not provided
   if (!columnData) {
     if (rows.length) {
-      internalColumnData.length = 0;
-      Object.keys(rows[0]).map((key) => {
-        internalColumnData.push({
-          id: String(key),
-          name: String(key),
-          align: "inherit",
-          enableSort: false,
-        });
-      });
+      internalColumnData = Object.keys(rows[0]).map((key) => ({
+        id: key,
+        name: key,
+        align: "inherit", // Default alignment
+        enableSort: false, // Default sorting
+      }));
     }
   } else {
     internalColumnData = columnData;
@@ -151,8 +140,8 @@ const DataTable: React.FC<IDataTableProps> = ({
 
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] = React.useState<keyof any>("");
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  // const [page, setPage] = React.useState(0);
+  // const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,
@@ -172,8 +161,8 @@ const DataTable: React.FC<IDataTableProps> = ({
   //   setPage(0);
   // };
 
-  const emptyRows =
-    rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  // const emptyRows =
+  //   rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   return (
     <React.Fragment>
@@ -183,8 +172,14 @@ const DataTable: React.FC<IDataTableProps> = ({
           marginBottom: 2,
         }}
       >
-        <TableContainer>
+        <TableContainer
+          sx={{
+            maxHeight: 400, // Set max height for scrollable container
+            overflowY: "auto", // Enable vertical scrolling
+          }}
+        >
           <Table
+            stickyHeader
             sx={{
               minWidth: 750,
               tableLayout: "fixed",
@@ -204,32 +199,27 @@ const DataTable: React.FC<IDataTableProps> = ({
             />
             <TableBody>
               {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                // .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
-                    {Object.keys(row).map((key, index) => (
+                    {internalColumnData.map((column, index) => (
                       <TableCell
-                        align={
-                          internalColumnData[index].align
-                            ? internalColumnData[index].align
-                            : "inherit"
-                        }
-                        key={key}
+                        align={column.align || "inherit"} // Safeguard align
+                        key={`${rowIndex}-${column.id}`}
                       >
-                        {row[key]}
+                        {row[column.id] || "-"} {/* Handle missing data */}
                       </TableCell>
                     ))}
                   </TableRow>
                 ))}
-              {emptyRows > 0 && (
+              {/* {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
                   <TableCell colSpan={6} />
                 </TableRow>
-              )}
+              )} */}
             </TableBody>
           </Table>
         </TableContainer>
-
       </Paper>
     </React.Fragment>
   );
